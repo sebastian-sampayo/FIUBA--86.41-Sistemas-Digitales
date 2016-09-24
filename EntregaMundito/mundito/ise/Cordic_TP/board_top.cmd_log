@@ -1,0 +1,214 @@
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/cordic_TP/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 
+xst -intstyle ise -ifn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.xst" -ofn "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc board_top.ucf -p xc3s500e-fg320-4 board_top.ngc board_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o board_top_map.ncd board_top.ngd board_top.pcf 
+par -w -intstyle ise -ol high -t 1 board_top_map.ncd board_top.ncd board_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml board_top.twx board_top.ncd -o board_top.twr board_top.pcf -ucf board_top.ucf 
+bitgen -intstyle ise -f board_top.ut board_top.ncd 

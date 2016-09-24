@@ -1,0 +1,1866 @@
+Release 14.7 - xst P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> 
+Reading design: board_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "board_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "board_top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : board_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/packages/my_components.vhd" in Library componenteslib.
+Architecture my_components of Entity my_components is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/flip-flop-D.vhd" in Library componenteslib.
+Architecture ffd_arch of Entity ffd is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/counter.vhd" in Library componenteslib.
+Architecture counter_arch of Entity counter is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/receive.vhd" in Library componenteslib.
+Architecture arch of Entity receive is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/transmit.vhd" in Library componenteslib.
+Architecture arch of Entity transmit is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/timing.vhd" in Library componenteslib.
+Architecture timing of Entity timing is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/dual_port_ram.vhd" in Library componenteslib.
+Architecture dual_port_ram_arch of Entity dual_port_ram is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/register.vhd" in Library componenteslib.
+Architecture register_n_arch of Entity register_n is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/barrel_shifter.vhd" in Library componenteslib.
+Architecture barrel_shifter_arch of Entity barrel_shifter is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/delay.vhd" in Library componenteslib.
+Entity <delay_reg> compiled.
+Entity <delay_reg> (Architecture <delay_arch>) compiled.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/video_ram.vhd" in Library componenteslib.
+Architecture video_ram_arch of Entity video_ram is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/VGActrl.vhd" in Library componenteslib.
+Architecture vga_ctrl_arq of Entity vga_ctrl is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/uart.vhd" in Library componenteslib.
+Architecture arch of Entity uart is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/MemoryController.vhd" in Library componenteslib.
+Architecture behavioral of Entity memorycontroller is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/ffd_serie.vhd" in Library componenteslib.
+Architecture ffd_serie_arch of Entity ffd_serie is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/clear_video_ram.vhd" in Library componenteslib.
+Architecture clear_video_ram_arch of Entity clear_video_ram is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/cordic_pkg.vhd" in Library work.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/cordic.vhd" in Library work.
+Architecture cordic_arch of Entity cordic is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/global_ctrl.vhd" in Library work.
+Architecture global_ctrl_arch of Entity global_ctrl is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/extRam_loader.vhd" in Library work.
+Architecture extram_loader_arch of Entity extram_loader is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/xyz_loader.vhd" in Library work.
+Architecture xyz_loader_arch of Entity xyz_loader is up to date.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/xyz_rotator.vhd" in Library work.
+Entity <xyz_rotator> compiled.
+Entity <xyz_rotator> (Architecture <xyz_rotator_arch>) compiled.
+Compiling vhdl file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/aplic.vhd" in Library work.
+Architecture rtl of Entity board_top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <board_top> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <global_ctrl> in library <work> (architecture <global_ctrl_arch>) with generics.
+	Nangle = 16
+
+Analyzing hierarchy for entity <clear_video_ram> in library <componenteslib> (architecture <clear_video_ram_arch>) with generics.
+	N_COLS = 64
+	N_ROWS = 64
+	N_bits_col = 6
+	N_bits_row = 6
+
+Analyzing hierarchy for entity <extRam_loader> in library <work> (architecture <extram_loader_arch>).
+
+Analyzing hierarchy for entity <ffd_serie> in library <componenteslib> (architecture <ffd_serie_arch>) with generics.
+	N = 5
+
+Analyzing hierarchy for entity <counter> in library <componenteslib> (architecture <counter_arch>) with generics.
+	MAX_COUNT = 8388607
+	N_bits = 23
+
+Analyzing hierarchy for entity <counter> in library <componenteslib> (architecture <counter_arch>) with generics.
+	MAX_COUNT = 8388608
+	N_bits = 23
+
+Analyzing hierarchy for entity <xyz_loader> in library <work> (architecture <xyz_loader_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <xyz_rotator> in library <work> (architecture <xyz_rotator_arch>) with generics.
+	Nangle = 16
+	Nits = 14
+	Nxy = 16
+
+Analyzing hierarchy for entity <video_ram> in library <componenteslib> (architecture <video_ram_arch>) with generics.
+	N_bits_col = 6
+	N_bits_row = 6
+	N_cols = 64
+	N_rows = 64
+
+Analyzing hierarchy for entity <vga_ctrl> in library <componenteslib> (architecture <vga_ctrl_arq>).
+
+Analyzing hierarchy for entity <uart> in library <componenteslib> (architecture <arch>) with generics.
+	F = 50000
+	min_baud = 1200
+	num_data_bits = 8
+
+Analyzing hierarchy for entity <MemoryController> in library <componenteslib> (architecture <behavioral>) with generics.
+	clock_frec = 50
+
+Analyzing hierarchy for entity <counter> in library <componenteslib> (architecture <counter_arch>) with generics.
+	MAX_COUNT = 63
+	N_bits = 6
+
+Analyzing hierarchy for entity <register_N> in library <componenteslib> (architecture <register_n_arch>) with generics.
+	N = 97
+
+Analyzing hierarchy for entity <cordic> in library <work> (architecture <cordic_arch>) with generics.
+	Nangle = 16
+	Nits = 14
+	Nxy = 16
+
+Analyzing hierarchy for entity <delay_reg> in library <componenteslib> (architecture <delay_arch>) with generics.
+	DELAY = 15
+	N = 16
+
+Analyzing hierarchy for entity <register_N> in library <componenteslib> (architecture <register_n_arch>) with generics.
+	N = 49
+
+Analyzing hierarchy for entity <dual_port_ram> in library <componenteslib> (architecture <dual_port_ram_arch>) with generics.
+	ADDRESS_WIDTH = 12
+	DATA_WIDTH = 1
+
+Analyzing hierarchy for entity <receive> in library <componenteslib> (architecture <arch>) with generics.
+	NDBits = 8
+
+Analyzing hierarchy for entity <transmit> in library <componenteslib> (architecture <arch>) with generics.
+	NDBits = 8
+
+Analyzing hierarchy for entity <timing> in library <componenteslib> (architecture <timing>) with generics.
+	F = 50000
+	min_baud = 1200
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <register_N> in library <componenteslib> (architecture <register_n_arch>) with generics.
+	N = 18
+
+Analyzing hierarchy for entity <barrel_shifter> in library <componenteslib> (architecture <barrel_shifter_arch>) with generics.
+	N = 18
+
+Analyzing hierarchy for entity <register_N> in library <componenteslib> (architecture <register_n_arch>) with generics.
+	N = 16
+
+Analyzing hierarchy for entity <register_N> in library <componenteslib> (architecture <register_n_arch>) with generics.
+	N = 16
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+Analyzing hierarchy for entity <ffd> in library <componenteslib> (architecture <ffd_arch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <board_top> in library <work> (Architecture <rtl>).
+    Set user-defined property "LOC =  B8" for signal <xtal_i> in unit <board_top>.
+    Set user-defined property "LOC =  H13" for signal <write_reset_in> in unit <board_top>.
+    Set user-defined property "LOC =  E18" for signal <read_reset_in> in unit <board_top>.
+    Set user-defined property "LOC =  B18" for signal <bypass_cordic> in unit <board_top>.
+    Set user-defined property "LOC =  D18" for signal <bypass_scale> in unit <board_top>.
+    Set user-defined property "LOC =  R17 N17 " for signal <speed> in unit <board_top>.
+    Set user-defined property "LOC =  L13 L14 K17 K18 H18 G18" for signal <rot_switches_in> in unit <board_top>.
+    Set user-defined property "LOC =  R4 F4 P15 E17 K14 K15 J15 J14" for signal <leds_out> in unit <board_top>.
+    Set user-defined property "LOC =  T4" for signal <hsync> in unit <board_top>.
+    Set user-defined property "LOC =  U3" for signal <vsync> in unit <board_top>.
+    Set user-defined property "LOC =  R8 T8 R9" for signal <red_out> in unit <board_top>.
+    Set user-defined property "LOC =  P6 P8 N8" for signal <grn_out> in unit <board_top>.
+    Set user-defined property "LOC =  U4 U5" for signal <blu_out> in unit <board_top>.
+    Set user-defined property "LOC =  U6" for signal <rx_i> in unit <board_top>.
+    Set user-defined property "LOC =  H5" for signal <clock_out> in unit <board_top>.
+    Set user-defined property "LOC =  K6 D1 K3 D2 C1 C2 E2 M5 E1 F2 G4 G5 G6 G3 F1 H6 H3 J5 H2 H1 H4 J2 J1" for signal <ADDRESS> in unit <board_top>.
+    Set user-defined property "LOC =  J4" for signal <ADV> in unit <board_top>.
+    Set user-defined property "LOC =  P7" for signal <CRE> in unit <board_top>.
+    Set user-defined property "LOC =  R6" for signal <CE> in unit <board_top>.
+    Set user-defined property "LOC =  T2" for signal <OE> in unit <board_top>.
+    Set user-defined property "LOC =  N7" for signal <WE> in unit <board_top>.
+    Set user-defined property "LOC =  K5" for signal <LB> in unit <board_top>.
+    Set user-defined property "LOC =  K4" for signal <UB> in unit <board_top>.
+    Set user-defined property "LOC =  T1 R3 N4 L2 M6 M3 L5 L3 R2 P2 P1 N5 M4 L6 L4 L1" for signal <DATA> in unit <board_top>.
+WARNING:Xst:753 - "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/aplic.vhd" line 330: Unconnected output port 'carry_out' of component 'counter'.
+WARNING:Xst:753 - "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/aplic.vhd" line 347: Unconnected output port 'carry_out' of component 'counter'.
+Entity <board_top> analyzed. Unit <board_top> generated.
+
+Analyzing generic Entity <global_ctrl> in library <work> (Architecture <global_ctrl_arch>).
+	Nangle = 16
+Entity <global_ctrl> analyzed. Unit <global_ctrl> generated.
+
+Analyzing generic Entity <clear_video_ram> in library <componenteslib> (Architecture <clear_video_ram_arch>).
+	N_COLS = 64
+	N_ROWS = 64
+	N_bits_col = 6
+	N_bits_row = 6
+Entity <clear_video_ram> analyzed. Unit <clear_video_ram> generated.
+
+Analyzing generic Entity <counter.3> in library <componenteslib> (Architecture <counter_arch>).
+	MAX_COUNT = 63
+	N_bits = 6
+Entity <counter.3> analyzed. Unit <counter.3> generated.
+
+Analyzing Entity <extRam_loader> in library <work> (Architecture <extram_loader_arch>).
+Entity <extRam_loader> analyzed. Unit <extRam_loader> generated.
+
+Analyzing generic Entity <ffd_serie> in library <componenteslib> (Architecture <ffd_serie_arch>).
+	N = 5
+Entity <ffd_serie> analyzed. Unit <ffd_serie> generated.
+
+Analyzing generic Entity <counter.1> in library <componenteslib> (Architecture <counter_arch>).
+	MAX_COUNT = 8388607
+	N_bits = 23
+Entity <counter.1> analyzed. Unit <counter.1> generated.
+
+Analyzing generic Entity <counter.2> in library <componenteslib> (Architecture <counter_arch>).
+	MAX_COUNT = 8388608
+	N_bits = 23
+INFO:Xst:2679 - Register <carry_out> in unit <counter.2> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <counter.2> analyzed. Unit <counter.2> generated.
+
+Analyzing Entity <xyz_loader> in library <work> (Architecture <xyz_loader_arch>).
+Entity <xyz_loader> analyzed. Unit <xyz_loader> generated.
+
+Analyzing Entity <ffd> in library <componenteslib> (Architecture <ffd_arch>).
+Entity <ffd> analyzed. Unit <ffd> generated.
+
+Analyzing generic Entity <xyz_rotator> in library <work> (Architecture <xyz_rotator_arch>).
+	Nangle = 16
+	Nits = 14
+	Nxy = 16
+Entity <xyz_rotator> analyzed. Unit <xyz_rotator> generated.
+
+Analyzing generic Entity <register_N.1> in library <componenteslib> (Architecture <register_n_arch>).
+	N = 97
+Entity <register_N.1> analyzed. Unit <register_N.1> generated.
+
+Analyzing generic Entity <cordic> in library <work> (Architecture <cordic_arch>).
+	Nangle = 16
+	Nits = 14
+	Nxy = 16
+Entity <cordic> analyzed. Unit <cordic> generated.
+
+Analyzing generic Entity <register_N.3> in library <componenteslib> (Architecture <register_n_arch>).
+	N = 18
+Entity <register_N.3> analyzed. Unit <register_N.3> generated.
+
+Analyzing generic Entity <barrel_shifter> in library <componenteslib> (Architecture <barrel_shifter_arch>).
+	N = 18
+INFO:Xst:1433 - Contents of array <x_aux> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <barrel_shifter> analyzed. Unit <barrel_shifter> generated.
+
+Analyzing generic Entity <register_N.4> in library <componenteslib> (Architecture <register_n_arch>).
+	N = 16
+Entity <register_N.4> analyzed. Unit <register_N.4> generated.
+
+Analyzing generic Entity <delay_reg> in library <componenteslib> (Architecture <delay_arch>).
+	DELAY = 15
+	N = 16
+Entity <delay_reg> analyzed. Unit <delay_reg> generated.
+
+Analyzing generic Entity <register_N.5> in library <componenteslib> (Architecture <register_n_arch>).
+	N = 16
+Entity <register_N.5> analyzed. Unit <register_N.5> generated.
+
+Analyzing generic Entity <register_N.2> in library <componenteslib> (Architecture <register_n_arch>).
+	N = 49
+Entity <register_N.2> analyzed. Unit <register_N.2> generated.
+
+Analyzing generic Entity <video_ram> in library <componenteslib> (Architecture <video_ram_arch>).
+	N_bits_col = 6
+	N_bits_row = 6
+	N_cols = 64
+	N_rows = 64
+Entity <video_ram> analyzed. Unit <video_ram> generated.
+
+Analyzing generic Entity <dual_port_ram> in library <componenteslib> (Architecture <dual_port_ram_arch>).
+	ADDRESS_WIDTH = 12
+	DATA_WIDTH = 1
+    Set property "ram_style = block" for signal <RAM>.
+WARNING:Xst:790 - "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/dual_port_ram.vhd" line 74: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1432 - Contents of array <RAM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/dual_port_ram.vhd" line 76: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1432 - Contents of array <RAM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <dual_port_ram> analyzed. Unit <dual_port_ram> generated.
+
+Analyzing Entity <vga_ctrl> in library <componenteslib> (Architecture <vga_ctrl_arq>).
+Entity <vga_ctrl> analyzed. Unit <vga_ctrl> generated.
+
+Analyzing generic Entity <uart> in library <componenteslib> (Architecture <arch>).
+	F = 50000
+	min_baud = 1200
+	num_data_bits = 8
+INFO:Xst:1739 - HDL ADVISOR - "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/uart.vhd" line 25: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+Entity <uart> analyzed. Unit <uart> generated.
+
+Analyzing generic Entity <receive> in library <componenteslib> (Architecture <arch>).
+	NDBits = 8
+INFO:Xst:1749 - "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/receive.vhd" line 66: report: Start bit error.
+INFO:Xst:1749 - "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/receive.vhd" line 94: report: Report statement with non static report message
+Entity <receive> analyzed. Unit <receive> generated.
+
+Analyzing generic Entity <transmit> in library <componenteslib> (Architecture <arch>).
+	NDBits = 8
+Entity <transmit> analyzed. Unit <transmit> generated.
+
+Analyzing generic Entity <timing> in library <componenteslib> (Architecture <timing>).
+	F = 50000
+	min_baud = 1200
+Entity <timing> analyzed. Unit <timing> generated.
+
+Analyzing generic Entity <MemoryController> in library <componenteslib> (Architecture <behavioral>).
+	clock_frec = 50
+Entity <MemoryController> analyzed. Unit <MemoryController> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <global_ctrl>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/global_ctrl.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <clear_reset>.
+    Found 16-bit up accumulator for signal <alpha_aux>.
+    Found 16-bit up accumulator for signal <beta_aux>.
+    Found 1-bit xor2 for signal <button_down$xor0000> created at line 80.
+    Found 1-bit xor2 for signal <button_down$xor0001> created at line 80.
+    Found 1-bit xor2 for signal <button_down$xor0002> created at line 80.
+    Found 16-bit 4-to-1 multiplexer for signal <delta_alpha>.
+    Found 16-bit 4-to-1 multiplexer for signal <delta_beta>.
+    Found 16-bit 4-to-1 multiplexer for signal <delta_gamma>.
+    Found 16-bit up accumulator for signal <gamma_aux>.
+    Found 16-bit adder for signal <minus_delta_angle>.
+    Found 1-bit register for signal <refresh_substate<0>>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 Accumulator(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  48 Multiplexer(s).
+Unit <global_ctrl> synthesized.
+
+
+Synthesizing Unit <extRam_loader>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/extRam_loader.vhd".
+    Found 1-bit register for signal <RxRdy_out>.
+    Found 16-bit register for signal <data_out>.
+    Found 1-bit register for signal <state<0>>.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+Unit <extRam_loader> synthesized.
+
+
+Synthesizing Unit <counter_1>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/counter.vhd".
+    Found 1-bit register for signal <carry_out>.
+    Found 23-bit up counter for signal <counter_aux>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <counter_1> synthesized.
+
+
+Synthesizing Unit <counter_2>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/counter.vhd".
+    Found 23-bit up counter for signal <counter_aux>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <counter_2> synthesized.
+
+
+Synthesizing Unit <xyz_loader>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/xyz_loader.vhd".
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <RxRdy_out>.
+    Found 16-bit register for signal <x>.
+    Found 16-bit register for signal <y>.
+    Found 16-bit register for signal <z>.
+    Found 1-bit register for signal <go_ram>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  50 D-type flip-flop(s).
+Unit <xyz_loader> synthesized.
+
+
+Synthesizing Unit <ffd>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/flip-flop-D.vhd".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <ffd> synthesized.
+
+
+Synthesizing Unit <vga_ctrl>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/VGActrl.vhd".
+    Found 1-bit register for signal <clkdiv_flag>.
+    Found 10-bit up counter for signal <hc>.
+    Found 10-bit comparator less for signal <hs$cmp_lt0000> created at line 135.
+    Found 10-bit subtractor for signal <pixel_col$addsub0000> created at line 140.
+    Found 10-bit subtractor for signal <pixel_col$addsub0001> created at line 140.
+    Found 10-bit subtractor for signal <pixel_row$addsub0000> created at line 141.
+    Found 10-bit subtractor for signal <pixel_row$addsub0001> created at line 141.
+    Found 10-bit up counter for signal <vc>.
+    Found 10-bit comparator greater for signal <vidon$cmp_gt0000> created at line 144.
+    Found 10-bit comparator greater for signal <vidon$cmp_gt0001> created at line 144.
+    Found 10-bit comparator less for signal <vidon$cmp_lt0000> created at line 144.
+    Found 10-bit comparator less for signal <vidon$cmp_lt0001> created at line 144.
+    Found 10-bit comparator less for signal <vs$cmp_lt0000> created at line 136.
+    Found 1-bit register for signal <vsenable>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <vga_ctrl> synthesized.
+
+
+Synthesizing Unit <MemoryController>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/MemoryController.vhd".
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit register for signal <data_out>.
+    Found 1-bit register for signal <read_ready_out>.
+    Found 16-bit tristate buffer for signal <DATA>.
+    Found 23-bit register for signal <address_aux>.
+    Found 13-bit register for signal <counter>.
+    Found 13-bit adder for signal <counter$share0000> created at line 148.
+    Found 16-bit register for signal <data_in_aux>.
+    Found 13-bit comparator greatequal for signal <state$cmp_ge0000> created at line 154.
+    Found 13-bit comparator greatequal for signal <state$cmp_ge0001> created at line 176.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  16 Tristate(s).
+Unit <MemoryController> synthesized.
+
+
+Synthesizing Unit <counter_3>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/counter.vhd".
+    Found 1-bit register for signal <carry_out>.
+    Found 6-bit up counter for signal <counter_aux>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <counter_3> synthesized.
+
+
+Synthesizing Unit <barrel_shifter>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/barrel_shifter.vhd".
+WARNING:Xst:647 - Input <M<30:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 18-bit 19-to-1 multiplexer for signal <y>.
+    Summary:
+	inferred  18 Multiplexer(s).
+Unit <barrel_shifter> synthesized.
+
+
+Synthesizing Unit <dual_port_ram>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/dual_port_ram.vhd".
+WARNING:Xst:646 - Signal <address_B_int<31:12>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <address_A_int<31:12>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <RAM_aux> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1439 - HDL ADVISOR - You may have used signed signal(s) to address this RAM. If that is the case, negative values being out of range, sign bits were ignored. As a result only the first half of the RAM is actually accessed. Please check your source code.
+    Found 4096x1-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 1-bit register for signal <data_B<0>>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 D-type flip-flop(s).
+Unit <dual_port_ram> synthesized.
+
+
+Synthesizing Unit <receive>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/receive.vhd".
+    Found finite state machine <FSM_3> for signal <RxFsm>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 8                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | RST                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <RxErr>.
+    Found 1-bit register for signal <ClrDiv>.
+    Found 8-bit register for signal <Dout>.
+    Found 8-bit register for signal <Rx_Reg>.
+    Found 32-bit register for signal <RxBitCnt>.
+    Found 32-bit adder for signal <RxBitCnt$addsub0000> created at line 82.
+    Found 1-bit register for signal <Sig_RxRdy>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  51 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <receive> synthesized.
+
+
+Synthesizing Unit <transmit>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/transmit.vhd".
+    Found finite state machine <FSM_4> for signal <TxFsm>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | RST                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <TxBusy>.
+    Found 8-bit register for signal <RegDin>.
+    Found 9-bit register for signal <Tx_Reg>.
+    Found 4-bit register for signal <TxBitCnt>.
+    Found 4-bit subtractor for signal <TxBitCnt$addsub0000> created at line 61.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <transmit> synthesized.
+
+
+Synthesizing Unit <timing>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/timing.vhd".
+    Found 1-bit register for signal <Top16>.
+    Found 1-bit register for signal <TopRx>.
+    Found 1-bit register for signal <TopTx>.
+    Found 32-bit up counter for signal <ClkDiv>.
+    Found 12-bit up counter for signal <Div16>.
+    Found 32-bit register for signal <RxDiv>.
+    Found 32-bit adder for signal <RxDiv$addsub0000> created at line 118.
+    Found 32-bit 4-to-1 multiplexer for signal <RxDiv$mux0001>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+Unit <timing> synthesized.
+
+
+Synthesizing Unit <clear_video_ram>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/clear_video_ram.vhd".
+Unit <clear_video_ram> synthesized.
+
+
+Synthesizing Unit <ffd_serie>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/ffd_serie.vhd".
+Unit <ffd_serie> synthesized.
+
+
+Synthesizing Unit <video_ram>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/video_ram.vhd".
+Unit <video_ram> synthesized.
+
+
+Synthesizing Unit <uart>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/uart.vhd".
+Unit <uart> synthesized.
+
+
+Synthesizing Unit <register_N_1>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/register.vhd".
+Unit <register_N_1> synthesized.
+
+
+Synthesizing Unit <register_N_2>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/register.vhd".
+Unit <register_N_2> synthesized.
+
+
+Synthesizing Unit <register_N_3>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/register.vhd".
+Unit <register_N_3> synthesized.
+
+
+Synthesizing Unit <register_N_4>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/register.vhd".
+Unit <register_N_4> synthesized.
+
+
+Synthesizing Unit <register_N_5>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/register.vhd".
+Unit <register_N_5> synthesized.
+
+
+Synthesizing Unit <cordic>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/cordic.vhd".
+WARNING:Xst:646 - Signal <y1_aux<25:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <y1_aux<7:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <x1_aux<25:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <x1_aux<7:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <rotating_st> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <rom_i_test> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <load_st_test> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32x16-bit ROM for signal <rom_atan_i$rom0000> created at line 429.
+    Found 32x26-bit ROM for signal <x1_aux$rom0000> created at line 513.
+    Found 32x26-bit ROM for signal <y1_aux$rom0000> created at line 514.
+    Using one-hot encoding for signal <state>.
+WARNING:Xst:643 - "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/cordic.vhd" line 513: The result of a 26x18-bit multiplication is partially used. Only the 26 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/cordic.vhd" line 514: The result of a 26x18-bit multiplication is partially used. Only the 26 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 5-bit register for signal <i>.
+    Found 5-bit adder for signal <i$addsub0000> created at line 254.
+    Found 5-bit comparator less for signal <i$cmp_lt0000> created at line 242.
+    Found 18-bit adder for signal <minus_x0>.
+    Found 18-bit adder for signal <minus_y0>.
+    Found 4-bit register for signal <state>.
+    Found 18-bit 4-to-1 multiplexer for signal <x0_init>.
+    Found 26x18-bit multiplier for signal <x1_aux>.
+    Found 18-bit addsub for signal <x_adder_out>.
+    Found 18-bit 4-to-1 multiplexer for signal <y0_init>.
+    Found 26x18-bit multiplier for signal <y1_aux>.
+    Found 18-bit addsub for signal <y_adder_out>.
+    Found 16-bit addsub for signal <z_adder_out>.
+    Summary:
+	inferred   3 ROM(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred   1 Comparator(s).
+	inferred  36 Multiplexer(s).
+Unit <cordic> synthesized.
+
+
+Synthesizing Unit <delay_reg>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/Librerias/componenteslib/src/delay.vhd".
+Unit <delay_reg> synthesized.
+
+
+Synthesizing Unit <xyz_rotator>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/xyz_rotator.vhd".
+Unit <xyz_rotator> synthesized.
+
+
+Synthesizing Unit <board_top>.
+    Related source file is "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/src/aplic.vhd".
+WARNING:Xst:646 - Signal <z> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <y_screen_aux<14:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <y_screen<21:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <x_screen_aux<14:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <x_screen<21:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tx> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sig_TxBusy> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <sig_StartTx> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <sig_RxErr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <sig_Din> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:1780 - Signal <reset_xyz> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <extRam_reset> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 4x16-bit ROM for signal <delta_angle>.
+    Found 6-bit adder for signal <A_col_aux>.
+    Found 6-bit adder for signal <A_row_aux>.
+    Found 1-bit xor2 for signal <button_down$xor0000> created at line 214.
+    Found 1-bit xor2 for signal <button_down$xor0001> created at line 214.
+    Found 1-bit xor2 for signal <button_down$xor0002> created at line 214.
+    Found 10-bit comparator greater for signal <enable_vga$cmp_lt0000> created at line 540.
+    Found 10-bit comparator less for signal <enable_vga$cmp_lt0001> created at line 540.
+    Found 10-bit comparator greater for signal <enable_vga$cmp_lt0002> created at line 540.
+    Found 10-bit comparator less for signal <enable_vga$cmp_lt0003> created at line 540.
+    Found 6-bit subtractor for signal <pixel_col_aux>.
+    Found 6-bit subtractor for signal <pixel_row_aux>.
+    Found 23-bit comparator equal for signal <read_stop$cmp_eq0000> created at line 267.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+Unit <board_top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x1-bit dual-port RAM                              : 1
+# ROMs                                                 : 10
+ 32x16-bit ROM                                         : 3
+ 32x26-bit ROM                                         : 6
+ 4x16-bit ROM                                          : 1
+# Multipliers                                          : 6
+ 26x18-bit multiplier                                  : 6
+# Adders/Subtractors                                   : 31
+ 10-bit subtractor                                     : 4
+ 13-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 16-bit addsub                                         : 3
+ 18-bit adder                                          : 6
+ 18-bit addsub                                         : 6
+ 32-bit adder                                          : 2
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 3
+ 6-bit adder                                           : 2
+ 6-bit subtractor                                      : 2
+# Counters                                             : 8
+ 10-bit up counter                                     : 2
+ 12-bit up counter                                     : 1
+ 23-bit up counter                                     : 2
+ 32-bit up counter                                     : 1
+ 6-bit up counter                                      : 2
+# Accumulators                                         : 3
+ 16-bit up accumulator                                 : 3
+# Registers                                            : 1196
+ 1-bit register                                        : 1176
+ 13-bit register                                       : 1
+ 16-bit register                                       : 5
+ 23-bit register                                       : 1
+ 32-bit register                                       : 2
+ 4-bit register                                        : 4
+ 5-bit register                                        : 3
+ 8-bit register                                        : 3
+ 9-bit register                                        : 1
+# Comparators                                          : 16
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 6
+ 13-bit comparator greatequal                          : 2
+ 23-bit comparator equal                               : 1
+ 5-bit comparator less                                 : 3
+# Multiplexers                                         : 16
+ 16-bit 4-to-1 multiplexer                             : 3
+ 18-bit 19-to-1 multiplexer                            : 6
+ 18-bit 4-to-1 multiplexer                             : 6
+ 32-bit 4-to-1 multiplexer                             : 1
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+# Xors                                                 : 6
+ 1-bit xor2                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_4> for best encoding.
+Optimizing FSM <UART_receiver/transmission_unit/TxFsm/FSM> on signal <TxFsm[1:2]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 00
+ load_tx  | 01
+ shift_tx | 11
+ stop_tx  | 10
+----------------------
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <UART_receiver/reception_unit/RxFsm/FSM> on signal <RxFsm[1:3]> with sequential encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 000
+ start_rx | 001
+ edge_rx  | 011
+ shift_rx | 101
+ stop_rx  | 100
+ rx_ovf   | 010
+----------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <ext_RAM/state/FSM> on signal <state[1:2]> with user encoding.
+---------------------
+ State   | Encoding
+---------------------
+ init    | 00
+ idle    | 01
+ writing | 10
+ reading | 11
+---------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <xyz_loader_inst/state/FSM> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 00
+ x_st  | 01
+ y_st  | 11
+ z_st  | 10
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <control_global/state/FSM> on signal <state[1:2]> with gray encoding.
+------------------------
+ State      | Encoding
+------------------------
+ idle       | 00
+ clearing   | 01
+ reading    | 11
+ refreshing | 10
+------------------------
+WARNING:Xst:1290 - Hierarchical block <pipe_reg_x> is unconnected in block <Y_rot>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Z_del> is unconnected in block <rotator>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[0].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[1].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[2].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[3].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[4].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[5].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[6].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[7].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[8].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[9].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[10].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[11].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[12].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[13].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[14].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[15].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[22].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[23].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[24].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[31].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[38].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[39].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[40].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cicle[47].ffd_inst> is unconnected in block <pipe_reg_out>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <transmission_unit> is unconnected in block <UART_receiver>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <dual_port_ram>.
+INFO:Xst:3226 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_B_0>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 1-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     weA            | connected to signal <write_enable>  | high     |
+    |     addrA          | connected to signal <address_A>     |          |
+    |     diA            | connected to signal <data_A>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4096-word x 1-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clock>         | rise     |
+    |     addrB          | connected to signal <address_B>     |          |
+    |     doB            | connected to signal <data_B>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <dual_port_ram> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 5
+# RAMs                                                 : 1
+ 4096x1-bit dual-port block RAM                        : 1
+# ROMs                                                 : 10
+ 32x16-bit ROM                                         : 3
+ 32x26-bit ROM                                         : 6
+ 4x16-bit ROM                                          : 1
+# Multipliers                                          : 6
+ 26x18-bit multiplier                                  : 6
+# Adders/Subtractors                                   : 29
+ 10-bit subtractor borrow in                           : 2
+ 13-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 16-bit addsub                                         : 3
+ 18-bit adder                                          : 6
+ 18-bit addsub                                         : 6
+ 32-bit adder                                          : 2
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 3
+ 6-bit adder                                           : 2
+ 6-bit subtractor                                      : 2
+# Counters                                             : 8
+ 10-bit up counter                                     : 2
+ 12-bit up counter                                     : 1
+ 23-bit up counter                                     : 2
+ 32-bit up counter                                     : 1
+ 6-bit up counter                                      : 2
+# Accumulators                                         : 3
+ 16-bit up accumulator                                 : 3
+# Registers                                            : 1419
+ Flip-Flops                                            : 1419
+# Comparators                                          : 16
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 6
+ 13-bit comparator greatequal                          : 2
+ 23-bit comparator equal                               : 1
+ 5-bit comparator less                                 : 3
+# Multiplexers                                         : 16
+ 16-bit 4-to-1 multiplexer                             : 3
+ 18-bit 19-to-1 multiplexer                            : 6
+ 18-bit 4-to-1 multiplexer                             : 6
+ 32-bit 4-to-1 multiplexer                             : 1
+# Xors                                                 : 6
+ 1-bit xor2                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <RegDin_0> in Unit <transmit> is equivalent to the following 7 FFs/Latches, which will be removed : <RegDin_1> <RegDin_2> <RegDin_3> <RegDin_4> <RegDin_5> <RegDin_6> <RegDin_7> 
+WARNING:Xst:1710 - FF/Latch <RegDin_0> (without init value) has a constant value of 0 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <state_0> of sequential type is unconnected in block <cordic>.
+WARNING:Xst:2677 - Node <write_extram_counter/carry_out> of sequential type is unconnected in block <board_top>.
+INFO:Xst:2146 - In block <cordic>, ROM <Mrom_x1_aux_rom0000> <Mrom_y1_aux_rom0000> are equivalent, XST will keep only <Mrom_x1_aux_rom0000>.
+WARNING:Xst:1293 - FF/Latch <TxFsm_FSM_FFd2> has a constant value of 0 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <TxBusy> (without init value) has a constant value of 0 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Tx_Reg_0> (without init value) has a constant value of 1 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Tx_Reg_1> (without init value) has a constant value of 1 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Tx_Reg_2> (without init value) has a constant value of 1 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Tx_Reg_3> (without init value) has a constant value of 1 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Tx_Reg_4> (without init value) has a constant value of 1 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Tx_Reg_5> (without init value) has a constant value of 1 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Tx_Reg_6> (without init value) has a constant value of 1 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Tx_Reg_7> (without init value) has a constant value of 1 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Tx_Reg_8> (without init value) has a constant value of 1 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TxFsm_FSM_FFd1> has a constant value of 0 in block <transmit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <TxBitCnt_0> of sequential type is unconnected in block <transmit>.
+WARNING:Xst:2677 - Node <TxBitCnt_1> of sequential type is unconnected in block <transmit>.
+WARNING:Xst:2677 - Node <TxBitCnt_2> of sequential type is unconnected in block <transmit>.
+WARNING:Xst:2677 - Node <TxBitCnt_3> of sequential type is unconnected in block <transmit>.
+
+Optimizing unit <board_top> ...
+
+Optimizing unit <global_ctrl> ...
+
+Optimizing unit <extRam_loader> ...
+
+Optimizing unit <xyz_loader> ...
+
+Optimizing unit <vga_ctrl> ...
+
+Optimizing unit <barrel_shifter> ...
+
+Optimizing unit <receive> ...
+
+Optimizing unit <timing> ...
+
+Optimizing unit <register_N_1> ...
+
+Optimizing unit <register_N_2> ...
+
+Optimizing unit <register_N_3> ...
+
+Optimizing unit <register_N_4> ...
+
+Optimizing unit <register_N_5> ...
+
+Optimizing unit <cordic> ...
+
+Optimizing unit <delay_reg> ...
+
+Optimizing unit <xyz_rotator> ...
+WARNING:Xst:2677 - Node <UART_receiver/reception_unit/RxErr> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_31> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_30> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_29> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_28> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_27> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_26> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_25> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_24> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_23> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_22> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_21> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_20> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_19> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_18> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_17> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_16> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_15> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_14> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_13> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_12> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_11> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_10> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_9> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_8> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_7> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_6> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_5> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_4> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_3> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_2> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_1> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/ClkDiv_0> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <UART_receiver/timings_unit/TopTx> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[15].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[14].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[13].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[12].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[11].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[10].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[9].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[8].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[7].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[6].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[5].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[4].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[3].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[2].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Z_del/gen_retardo[1].con_retardo.aa/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/Mmult_x1_aux> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/Mmult_x1_aux1> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[16].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/Y_rot/pipe_reg_x/cicle[17].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[47].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[40].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[39].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[38].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[31].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[24].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[23].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[22].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[15].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[14].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[13].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[12].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[11].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[10].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[9].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[8].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[7].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[6].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[5].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[4].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[3].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[2].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[1].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+WARNING:Xst:2677 - Node <rotator/pipe_reg_out/cicle[0].ffd_inst/Q> of sequential type is unconnected in block <board_top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block board_top, actual ratio is 34.
+FlipFlop rotator/X_rot/i_0 has been replicated 1 time(s)
+FlipFlop rotator/X_rot/i_1 has been replicated 1 time(s)
+FlipFlop rotator/X_rot/i_2 has been replicated 1 time(s)
+FlipFlop rotator/X_rot/i_3 has been replicated 1 time(s)
+FlipFlop rotator/X_rot/i_4 has been replicated 2 time(s)
+FlipFlop rotator/Y_rot/i_0 has been replicated 1 time(s)
+FlipFlop rotator/Y_rot/i_2 has been replicated 1 time(s)
+FlipFlop rotator/Y_rot/i_3 has been replicated 1 time(s)
+FlipFlop rotator/Y_rot/i_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <board_top> :
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[0].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[1].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[2].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[3].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[4].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[5].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[6].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[7].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[8].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[9].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[10].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[11].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[12].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[13].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[14].ffd_inst/Q>.
+	Found 16-bit shift register for signal <rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[15].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[0].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[1].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[2].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[3].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[4].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[5].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[6].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[7].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[8].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[9].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[10].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[11].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[12].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[13].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[14].ffd_inst/Q>.
+	Found 15-bit shift register for signal <rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[15].ffd_inst/Q>.
+INFO:Xst:741 - HDL ADVISOR - A 5-bit shift register was found for signal <RdRdy_delay/delay[5].ffd_delay/Q> and currently occupies 5 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL16 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <board_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 770
+ Flip-Flops                                            : 770
+# Shift Registers                                      : 32
+ 15-bit shift register                                 : 16
+ 16-bit shift register                                 : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : board_top.ngr
+Top Level Output File Name         : board_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 79
+
+Cell Usage :
+# BELS                             : 4406
+#      GND                         : 1
+#      INV                         : 119
+#      LUT1                        : 469
+#      LUT2                        : 162
+#      LUT2_D                      : 3
+#      LUT2_L                      : 3
+#      LUT3                        : 1070
+#      LUT3_D                      : 21
+#      LUT3_L                      : 3
+#      LUT4                        : 604
+#      LUT4_D                      : 5
+#      LUT4_L                      : 5
+#      MUXCY                       : 523
+#      MUXF5                       : 573
+#      MUXF6                       : 216
+#      MUXF7                       : 108
+#      VCC                         : 1
+#      XORCY                       : 520
+# FlipFlops/Latches                : 849
+#      FD                          : 30
+#      FDC                         : 62
+#      FDCE                        : 547
+#      FDE                         : 169
+#      FDPE                        : 14
+#      FDR                         : 2
+#      FDRE                        : 20
+#      FDS                         : 5
+# RAMS                             : 1
+#      RAMB16_S1_S1                : 1
+# Shift Registers                  : 32
+#      SRL16E                      : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 78
+#      IBUF                        : 13
+#      IOBUF                       : 16
+#      OBUF                        : 49
+# MULTs                            : 10
+#      MULT18X18SIO                : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1364  out of   4656    29%  
+ Number of Slice Flip Flops:            849  out of   9312     9%  
+ Number of 4 input LUTs:               2496  out of   9312    26%  
+    Number used as logic:              2464
+    Number used as Shift registers:      32
+ Number of IOs:                          79
+ Number of bonded IOBs:                  79  out of    232    34%  
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of MULT18X18SIOs:                10  out of     20    50%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+xtal_i                             | BUFGP                  | 882   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------+--------------------------------------------+-------+
+Control Signal                                          | Buffer(FF name)                            | Load  |
+--------------------------------------------------------+--------------------------------------------+-------+
+leds_out_6_OBUF(control_global/state_FSM_Out11:O)       | NONE(leds_out_6_OBUF_shift1)               | 436   |
+write_reset_in                                          | IBUF                                       | 145   |
+reset_read_extram_counter(reset_read_extram_counter1:O) | NONE(read_extram_counter/counter_aux_0)    | 23    |
+control_global/clear_reset(control_global/clear_reset:Q)| NONE(clear_inst/col_counter_inst/carry_out)| 14    |
+read_stop_ffd/Q(read_stop_ffd/Q:Q)                      | NONE(xyz_loader_inst/go_ram)               | 3     |
+Mrom_delta_angle10(XST_GND:G)                           | NONE(delay_vga/Q)                          | 2     |
+--------------------------------------------------------+--------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 17.054ns (Maximum Frequency: 58.637MHz)
+   Minimum input arrival time before clock: 9.142ns
+   Maximum output required time after clock: 11.375ns
+   Maximum combinational path delay: 8.216ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'xtal_i'
+  Clock period: 17.054ns (frequency: 58.637MHz)
+  Total number of paths / destination ports: 203139 / 1396
+-------------------------------------------------------------------------
+Delay:               17.054ns (Levels of Logic = 16)
+  Source:            rotator/X_rot/i_4_1 (FF)
+  Destination:       rotator/Y_rot/reg_y/cicle[16].ffd_inst/Q (FF)
+  Source Clock:      xtal_i rising
+  Destination Clock: xtal_i rising
+
+  Data Path: rotator/X_rot/i_4_1 to rotator/Y_rot/reg_y/cicle[16].ffd_inst/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.591   0.595  rotator/X_rot/i_4_1 (rotator/X_rot/i_4_1)
+     LUT2_D:I0->O         12   0.704   0.965  rotator/X_rot/Mrom_x1_aux_rom0000131 (rotator/X_rot/N14)
+     LUT4:I3->O            2   0.704   0.447  rotator/X_rot/Mrom_x1_aux_rom0000111 (rotator/X_rot/Mrom_x1_aux_rom00001)
+     MULT18X18SIO:A1->P17    1   4.873   0.499  rotator/X_rot/Mmult_y1_aux (rotator/X_rot/Mmult_y1_aux_P_to_Adder_A_17)
+     LUT2:I1->O            1   0.704   0.000  rotator/X_rot/Mmult_y1_aux0_Madd_lut<17> (rotator/X_rot/Mmult_y1_aux0_Madd_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  rotator/X_rot/Mmult_y1_aux0_Madd_cy<17> (rotator/X_rot/Mmult_y1_aux0_Madd_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  rotator/X_rot/Mmult_y1_aux0_Madd_cy<18> (rotator/X_rot/Mmult_y1_aux0_Madd_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  rotator/X_rot/Mmult_y1_aux0_Madd_cy<19> (rotator/X_rot/Mmult_y1_aux0_Madd_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  rotator/X_rot/Mmult_y1_aux0_Madd_cy<20> (rotator/X_rot/Mmult_y1_aux0_Madd_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  rotator/X_rot/Mmult_y1_aux0_Madd_cy<21> (rotator/X_rot/Mmult_y1_aux0_Madd_cy<21>)
+     MUXCY:CI->O           0   0.059   0.000  rotator/X_rot/Mmult_y1_aux0_Madd_cy<22> (rotator/X_rot/Mmult_y1_aux0_Madd_cy<22>)
+     XORCY:CI->O           5   0.804   0.633  rotator/X_rot/Mmult_y1_aux0_Madd_xor<23> (rotator/xrot_y1<15>)
+     INV:I->O              1   0.704   0.000  rotator/Y_rot/Madd_minus_x0_not0000<15>11_INV_0 (rotator/Y_rot/Madd_minus_x0_not0000<15>1)
+     MUXCY:S->O            0   0.464   0.000  rotator/Y_rot/Madd_minus_x0_cy<15> (rotator/Y_rot/Madd_minus_x0_cy<15>)
+     XORCY:CI->O           5   0.804   0.637  rotator/Y_rot/Madd_minus_x0_xor<16> (rotator/Y_rot/minus_x0<16>)
+     LUT4:I3->O            2   0.704   0.451  rotator/Y_rot/y_in_reg<17>12 (rotator/Y_rot/y_in_reg<16>12)
+     LUT4:I3->O            1   0.704   0.000  rotator/Y_rot/y_in_reg<17>38 (rotator/Y_rot/y_in_reg<17>)
+     FDCE:D                    0.308          rotator/Y_rot/reg_y/cicle[17].ffd_inst/Q
+    ----------------------------------------
+    Total                     17.054ns (12.827ns logic, 4.227ns route)
+                                       (75.2% logic, 24.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'xtal_i'
+  Total number of paths / destination ports: 4347 / 83
+-------------------------------------------------------------------------
+Offset:              9.142ns (Levels of Logic = 21)
+  Source:            speed<0> (PAD)
+  Destination:       control_global/beta_aux_15 (FF)
+  Destination Clock: xtal_i rising
+
+  Data Path: speed<0> to control_global/beta_aux_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.218   1.136  speed_0_IBUF (speed_0_IBUF)
+     LUT2:I0->O            1   0.704   0.000  Mrom_delta_angle12 (Mrom_delta_angle11)
+     MUXCY:S->O            1   0.464   0.000  control_global/Madd_minus_delta_angle_cy<0> (control_global/Madd_minus_delta_angle_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Madd_minus_delta_angle_cy<1> (control_global/Madd_minus_delta_angle_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Madd_minus_delta_angle_cy<2> (control_global/Madd_minus_delta_angle_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Madd_minus_delta_angle_cy<3> (control_global/Madd_minus_delta_angle_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Madd_minus_delta_angle_cy<4> (control_global/Madd_minus_delta_angle_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Madd_minus_delta_angle_cy<5> (control_global/Madd_minus_delta_angle_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Madd_minus_delta_angle_cy<6> (control_global/Madd_minus_delta_angle_cy<6>)
+     XORCY:CI->O           3   0.804   0.566  control_global/Madd_minus_delta_angle_xor<7> (control_global/minus_delta_angle<7>)
+     LUT4:I2->O            1   0.704   0.499  control_global/Mmux_delta_beta141 (control_global/delta_beta<7>)
+     LUT2:I1->O            1   0.704   0.000  control_global/Maccum_beta_aux_lut<7> (control_global/Maccum_beta_aux_lut<7>)
+     MUXCY:S->O            1   0.464   0.000  control_global/Maccum_beta_aux_cy<7> (control_global/Maccum_beta_aux_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Maccum_beta_aux_cy<8> (control_global/Maccum_beta_aux_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Maccum_beta_aux_cy<9> (control_global/Maccum_beta_aux_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Maccum_beta_aux_cy<10> (control_global/Maccum_beta_aux_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Maccum_beta_aux_cy<11> (control_global/Maccum_beta_aux_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Maccum_beta_aux_cy<12> (control_global/Maccum_beta_aux_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  control_global/Maccum_beta_aux_cy<13> (control_global/Maccum_beta_aux_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  control_global/Maccum_beta_aux_cy<14> (control_global/Maccum_beta_aux_cy<14>)
+     XORCY:CI->O           1   0.804   0.000  control_global/Maccum_beta_aux_xor<15> (control_global/Result<15>2)
+     FDE:D                     0.308          control_global/beta_aux_15
+    ----------------------------------------
+    Total                      9.142ns (6.941ns logic, 2.201ns route)
+                                       (75.9% logic, 24.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'xtal_i'
+  Total number of paths / destination ports: 410 / 62
+-------------------------------------------------------------------------
+Offset:              11.375ns (Levels of Logic = 6)
+  Source:            vga/vc_5 (FF)
+  Destination:       red_out<2> (PAD)
+  Source Clock:      xtal_i rising
+
+  Data Path: vga/vc_5 to red_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.591   0.961  vga/vc_5 (vga/vc_5)
+     LUT2_L:I1->LO         1   0.704   0.104  vga/vidon_and000017 (vga/vidon_and000017)
+     LUT4:I3->O            1   0.704   0.424  vga/vidon_and000029 (vga/vidon_and000029)
+     LUT4:I3->O            2   0.704   0.451  vga/vidon_and0000122_SW0 (N199)
+     LUT4:I3->O           26   0.704   1.295  vga/vidon_and0000122 (vga/vidon)
+     LUT3:I2->O            8   0.704   0.757  vga/blu_o<0>1 (blu_out_0_OBUF)
+     OBUF:I->O                 3.272          red_out_2_OBUF (red_out<2>)
+    ----------------------------------------
+    Total                     11.375ns (7.383ns logic, 3.992ns route)
+                                       (64.9% logic, 35.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 1
+-------------------------------------------------------------------------
+Delay:               8.216ns (Levels of Logic = 4)
+  Source:            write_reset_in (PAD)
+  Destination:       leds_out<7> (PAD)
+
+  Data Path: write_reset_in to leds_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           147   1.218   1.303  write_reset_in_IBUF (write_reset_in_IBUF)
+     LUT4:I3->O            1   0.704   0.595  button_down18 (button_down18)
+     LUT2:I0->O            1   0.704   0.420  button_down52 (leds_out_7_OBUF)
+     OBUF:I->O                 3.272          leds_out_7_OBUF (leds_out<7>)
+    ----------------------------------------
+    Total                      8.216ns (5.898ns logic, 2.318ns route)
+                                       (71.8% logic, 28.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 317.00 secs
+Total CPU time to Xst completion: 309.19 secs
+ 
+--> 
+
+
+Total memory usage is 237556 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  393 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+

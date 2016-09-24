@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.ncd
+OUTFILE=/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP/board_top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/ise/Cordic_TP
+LICENSE=WebPack
+USER_INFO=211135102_0_0_932

@@ -1,0 +1,4 @@
+
+#Created by Constraints Editor (xc3s500e-fg320-4) - 2016/03/01
+NET "xtal_i" TNM_NET = xtal_i;
+TIMESPEC TS_xtal_i = PERIOD "xtal_i" 20 ns HIGH 50%;

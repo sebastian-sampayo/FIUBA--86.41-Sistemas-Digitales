@@ -1,0 +1,907 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Mar 02 21:48:49 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CE" LOCATE = SITE "R6" LEVEL 1;
+COMP "LB" LOCATE = SITE "K5" LEVEL 1;
+COMP "OE" LOCATE = SITE "T2" LEVEL 1;
+COMP "UB" LOCATE = SITE "K4" LEVEL 1;
+COMP "WE" LOCATE = SITE "N7" LEVEL 1;
+COMP "ADV" LOCATE = SITE "J4" LEVEL 1;
+COMP "CRE" LOCATE = SITE "P7" LEVEL 1;
+COMP "rot_switches_in<0>" LOCATE = SITE "G18" LEVEL 1;
+COMP "rot_switches_in<1>" LOCATE = SITE "H18" LEVEL 1;
+COMP "rot_switches_in<2>" LOCATE = SITE "K18" LEVEL 1;
+COMP "rot_switches_in<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "rot_switches_in<4>" LOCATE = SITE "L14" LEVEL 1;
+COMP "rot_switches_in<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "rx_i" LOCATE = SITE "U6" LEVEL 1;
+COMP "clock_out" LOCATE = SITE "H5" LEVEL 1;
+COMP "hsync" LOCATE = SITE "T4" LEVEL 1;
+COMP "vsync" LOCATE = SITE "U3" LEVEL 1;
+COMP "bypass_scale" LOCATE = SITE "D18" LEVEL 1;
+COMP "leds_out<0>" LOCATE = SITE "J14" LEVEL 1;
+COMP "leds_out<1>" LOCATE = SITE "J15" LEVEL 1;
+COMP "leds_out<2>" LOCATE = SITE "K15" LEVEL 1;
+COMP "leds_out<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "leds_out<4>" LOCATE = SITE "E17" LEVEL 1;
+COMP "leds_out<5>" LOCATE = SITE "P15" LEVEL 1;
+COMP "leds_out<6>" LOCATE = SITE "F4" LEVEL 1;
+COMP "leds_out<7>" LOCATE = SITE "R4" LEVEL 1;
+COMP "blu_out<0>" LOCATE = SITE "U5" LEVEL 1;
+COMP "blu_out<1>" LOCATE = SITE "U4" LEVEL 1;
+COMP "read_reset_in" LOCATE = SITE "E18" LEVEL 1;
+COMP "xtal_i" LOCATE = SITE "B8" LEVEL 1;
+COMP "DATA<10>" LOCATE = SITE "M3" LEVEL 1;
+COMP "DATA<11>" LOCATE = SITE "M6" LEVEL 1;
+COMP "DATA<12>" LOCATE = SITE "L2" LEVEL 1;
+COMP "DATA<13>" LOCATE = SITE "N4" LEVEL 1;
+COMP "DATA<14>" LOCATE = SITE "R3" LEVEL 1;
+COMP "DATA<15>" LOCATE = SITE "T1" LEVEL 1;
+COMP "speed<0>" LOCATE = SITE "N17" LEVEL 1;
+COMP "speed<1>" LOCATE = SITE "R17" LEVEL 1;
+COMP "write_reset_in" LOCATE = SITE "H13" LEVEL 1;
+COMP "ADDRESS<10>" LOCATE = SITE "G6" LEVEL 1;
+COMP "ADDRESS<11>" LOCATE = SITE "G5" LEVEL 1;
+COMP "ADDRESS<20>" LOCATE = SITE "K3" LEVEL 1;
+COMP "ADDRESS<12>" LOCATE = SITE "G4" LEVEL 1;
+COMP "ADDRESS<21>" LOCATE = SITE "D1" LEVEL 1;
+COMP "ADDRESS<13>" LOCATE = SITE "F2" LEVEL 1;
+COMP "ADDRESS<22>" LOCATE = SITE "K6" LEVEL 1;
+COMP "ADDRESS<14>" LOCATE = SITE "E1" LEVEL 1;
+COMP "ADDRESS<15>" LOCATE = SITE "M5" LEVEL 1;
+COMP "ADDRESS<16>" LOCATE = SITE "E2" LEVEL 1;
+COMP "ADDRESS<17>" LOCATE = SITE "C2" LEVEL 1;
+COMP "ADDRESS<18>" LOCATE = SITE "C1" LEVEL 1;
+COMP "ADDRESS<19>" LOCATE = SITE "D2" LEVEL 1;
+COMP "DATA<0>" LOCATE = SITE "L1" LEVEL 1;
+COMP "DATA<1>" LOCATE = SITE "L4" LEVEL 1;
+COMP "DATA<2>" LOCATE = SITE "L6" LEVEL 1;
+COMP "DATA<3>" LOCATE = SITE "M4" LEVEL 1;
+COMP "DATA<4>" LOCATE = SITE "N5" LEVEL 1;
+COMP "DATA<5>" LOCATE = SITE "P1" LEVEL 1;
+COMP "DATA<6>" LOCATE = SITE "P2" LEVEL 1;
+COMP "DATA<7>" LOCATE = SITE "R2" LEVEL 1;
+COMP "DATA<8>" LOCATE = SITE "L3" LEVEL 1;
+COMP "DATA<9>" LOCATE = SITE "L5" LEVEL 1;
+COMP "grn_out<0>" LOCATE = SITE "N8" LEVEL 1;
+COMP "grn_out<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "grn_out<2>" LOCATE = SITE "P6" LEVEL 1;
+COMP "ADDRESS<0>" LOCATE = SITE "J1" LEVEL 1;
+COMP "ADDRESS<1>" LOCATE = SITE "J2" LEVEL 1;
+COMP "ADDRESS<2>" LOCATE = SITE "H4" LEVEL 1;
+COMP "ADDRESS<3>" LOCATE = SITE "H1" LEVEL 1;
+COMP "ADDRESS<4>" LOCATE = SITE "H2" LEVEL 1;
+COMP "ADDRESS<5>" LOCATE = SITE "J5" LEVEL 1;
+COMP "ADDRESS<6>" LOCATE = SITE "H3" LEVEL 1;
+COMP "ADDRESS<7>" LOCATE = SITE "H6" LEVEL 1;
+COMP "ADDRESS<8>" LOCATE = SITE "F1" LEVEL 1;
+COMP "ADDRESS<9>" LOCATE = SITE "G3" LEVEL 1;
+COMP "bypass_cordic" LOCATE = SITE "B18" LEVEL 1;
+COMP "red_out<0>" LOCATE = SITE "R9" LEVEL 1;
+COMP "red_out<1>" LOCATE = SITE "T8" LEVEL 1;
+COMP "red_out<2>" LOCATE = SITE "R8" LEVEL 1;
+NET "xtal_i_BUFGP/IBUFG" BEL "xtal_i_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+PIN video_RAM_inst/mem/Mram_RAM.A_pins<15> = BEL
+        "video_RAM_inst/mem/Mram_RAM.A" PINNAME CLKA;
+PIN video_RAM_inst/mem/Mram_RAM.B_pins<15> = BEL
+        "video_RAM_inst/mem/Mram_RAM.B" PINNAME CLKB;
+TIMEGRP xtal_i = BEL "delay_vga/Q" BEL "read_stop_ffd/Q" BEL
+        "clear_inst/col_counter_inst/carry_out" BEL
+        "clear_inst/row_counter_inst/carry_out" BEL
+        "RdRdy_delay/delay[1].ffd_delay/Q" BEL
+        "RdRdy_delay/delay[2].ffd_delay/Q" BEL
+        "RdRdy_delay/delay[3].ffd_delay/Q" BEL
+        "RdRdy_delay/delay[4].ffd_delay/Q" BEL
+        "RdRdy_delay/delay[5].ffd_delay/Q" BEL
+        "write_extram_counter/counter_aux_0" BEL
+        "write_extram_counter/counter_aux_1" BEL
+        "write_extram_counter/counter_aux_2" BEL
+        "write_extram_counter/counter_aux_3" BEL
+        "write_extram_counter/counter_aux_4" BEL
+        "write_extram_counter/counter_aux_5" BEL
+        "write_extram_counter/counter_aux_6" BEL
+        "write_extram_counter/counter_aux_7" BEL
+        "write_extram_counter/counter_aux_8" BEL
+        "write_extram_counter/counter_aux_9" BEL
+        "write_extram_counter/counter_aux_10" BEL
+        "write_extram_counter/counter_aux_11" BEL
+        "write_extram_counter/counter_aux_12" BEL
+        "write_extram_counter/counter_aux_13" BEL
+        "write_extram_counter/counter_aux_14" BEL
+        "write_extram_counter/counter_aux_15" BEL
+        "write_extram_counter/counter_aux_16" BEL
+        "write_extram_counter/counter_aux_17" BEL
+        "write_extram_counter/counter_aux_18" BEL
+        "write_extram_counter/counter_aux_19" BEL
+        "write_extram_counter/counter_aux_20" BEL
+        "write_extram_counter/counter_aux_21" BEL
+        "write_extram_counter/counter_aux_22" BEL
+        "read_extram_counter/counter_aux_0" BEL
+        "read_extram_counter/counter_aux_1" BEL
+        "read_extram_counter/counter_aux_2" BEL
+        "read_extram_counter/counter_aux_3" BEL
+        "read_extram_counter/counter_aux_4" BEL
+        "read_extram_counter/counter_aux_5" BEL
+        "read_extram_counter/counter_aux_6" BEL
+        "read_extram_counter/counter_aux_7" BEL
+        "read_extram_counter/counter_aux_8" BEL
+        "read_extram_counter/counter_aux_9" BEL
+        "read_extram_counter/counter_aux_10" BEL
+        "read_extram_counter/counter_aux_11" BEL
+        "read_extram_counter/counter_aux_12" BEL
+        "read_extram_counter/counter_aux_13" BEL
+        "read_extram_counter/counter_aux_14" BEL
+        "read_extram_counter/counter_aux_15" BEL
+        "read_extram_counter/counter_aux_16" BEL
+        "read_extram_counter/counter_aux_17" BEL
+        "read_extram_counter/counter_aux_18" BEL
+        "read_extram_counter/counter_aux_19" BEL
+        "read_extram_counter/counter_aux_20" BEL
+        "read_extram_counter/counter_aux_21" BEL
+        "read_extram_counter/counter_aux_22" BEL
+        "clear_inst/row_counter_inst/counter_aux_0" BEL
+        "clear_inst/row_counter_inst/counter_aux_1" BEL
+        "clear_inst/row_counter_inst/counter_aux_2" BEL
+        "clear_inst/row_counter_inst/counter_aux_3" BEL
+        "clear_inst/row_counter_inst/counter_aux_4" BEL
+        "clear_inst/row_counter_inst/counter_aux_5" BEL
+        "clear_inst/col_counter_inst/counter_aux_0" BEL
+        "clear_inst/col_counter_inst/counter_aux_1" BEL
+        "clear_inst/col_counter_inst/counter_aux_2" BEL
+        "clear_inst/col_counter_inst/counter_aux_3" BEL
+        "clear_inst/col_counter_inst/counter_aux_4" BEL
+        "clear_inst/col_counter_inst/counter_aux_5" BEL
+        "ext_RAM/state_FSM_FFd2" BEL "ext_RAM/address_aux_22" BEL
+        "ext_RAM/address_aux_21" BEL "ext_RAM/address_aux_20" BEL
+        "ext_RAM/address_aux_19" BEL "ext_RAM/address_aux_18" BEL
+        "ext_RAM/address_aux_17" BEL "ext_RAM/address_aux_16" BEL
+        "ext_RAM/address_aux_15" BEL "ext_RAM/address_aux_14" BEL
+        "ext_RAM/address_aux_13" BEL "ext_RAM/address_aux_12" BEL
+        "ext_RAM/address_aux_11" BEL "ext_RAM/address_aux_10" BEL
+        "ext_RAM/address_aux_9" BEL "ext_RAM/address_aux_8" BEL
+        "ext_RAM/address_aux_7" BEL "ext_RAM/address_aux_6" BEL
+        "ext_RAM/address_aux_5" BEL "ext_RAM/address_aux_4" BEL
+        "ext_RAM/address_aux_3" BEL "ext_RAM/address_aux_2" BEL
+        "ext_RAM/address_aux_1" BEL "ext_RAM/address_aux_0" BEL
+        "ext_RAM/data_in_aux_15" BEL "ext_RAM/data_in_aux_14" BEL
+        "ext_RAM/data_in_aux_13" BEL "ext_RAM/data_in_aux_12" BEL
+        "ext_RAM/data_in_aux_11" BEL "ext_RAM/data_in_aux_10" BEL
+        "ext_RAM/data_in_aux_9" BEL "ext_RAM/data_in_aux_8" BEL
+        "ext_RAM/data_in_aux_7" BEL "ext_RAM/data_in_aux_6" BEL
+        "ext_RAM/data_in_aux_5" BEL "ext_RAM/data_in_aux_4" BEL
+        "ext_RAM/data_in_aux_3" BEL "ext_RAM/data_in_aux_2" BEL
+        "ext_RAM/data_in_aux_1" BEL "ext_RAM/data_in_aux_0" BEL
+        "ext_RAM/counter_12" BEL "ext_RAM/counter_11" BEL "ext_RAM/counter_10"
+        BEL "ext_RAM/counter_9" BEL "ext_RAM/counter_8" BEL
+        "ext_RAM/counter_7" BEL "ext_RAM/counter_6" BEL "ext_RAM/counter_5"
+        BEL "ext_RAM/counter_4" BEL "ext_RAM/counter_3" BEL
+        "ext_RAM/counter_2" BEL "ext_RAM/data_out_15" BEL
+        "ext_RAM/data_out_14" BEL "ext_RAM/data_out_13" BEL
+        "ext_RAM/data_out_12" BEL "ext_RAM/data_out_11" BEL
+        "ext_RAM/data_out_10" BEL "ext_RAM/data_out_9" BEL
+        "ext_RAM/data_out_8" BEL "ext_RAM/data_out_7" BEL "ext_RAM/data_out_6"
+        BEL "ext_RAM/data_out_5" BEL "ext_RAM/data_out_4" BEL
+        "ext_RAM/data_out_3" BEL "ext_RAM/data_out_2" BEL "ext_RAM/data_out_1"
+        BEL "ext_RAM/data_out_0" BEL "control_global/state_FSM_FFd2" BEL
+        "control_global/state_FSM_FFd1" BEL "control_global/beta_aux_15" BEL
+        "control_global/beta_aux_14" BEL "control_global/beta_aux_13" BEL
+        "control_global/beta_aux_12" BEL "control_global/beta_aux_11" BEL
+        "control_global/beta_aux_10" BEL "control_global/beta_aux_9" BEL
+        "control_global/beta_aux_8" BEL "control_global/beta_aux_7" BEL
+        "control_global/beta_aux_6" BEL "control_global/beta_aux_5" BEL
+        "control_global/beta_aux_4" BEL "control_global/beta_aux_3" BEL
+        "control_global/beta_aux_2" BEL "control_global/beta_aux_1" BEL
+        "control_global/beta_aux_0" BEL "control_global/alpha_aux_15" BEL
+        "control_global/alpha_aux_14" BEL "control_global/alpha_aux_13" BEL
+        "control_global/alpha_aux_12" BEL "control_global/alpha_aux_11" BEL
+        "control_global/alpha_aux_10" BEL "control_global/alpha_aux_9" BEL
+        "control_global/alpha_aux_8" BEL "control_global/alpha_aux_7" BEL
+        "control_global/alpha_aux_6" BEL "control_global/alpha_aux_5" BEL
+        "control_global/alpha_aux_4" BEL "control_global/alpha_aux_3" BEL
+        "control_global/alpha_aux_2" BEL "control_global/alpha_aux_1" BEL
+        "control_global/alpha_aux_0" BEL "control_global/gamma_aux_15" BEL
+        "control_global/gamma_aux_14" BEL "control_global/gamma_aux_13" BEL
+        "control_global/gamma_aux_12" BEL "control_global/gamma_aux_11" BEL
+        "control_global/gamma_aux_10" BEL "control_global/gamma_aux_9" BEL
+        "control_global/gamma_aux_8" BEL "control_global/gamma_aux_7" BEL
+        "control_global/gamma_aux_6" BEL "control_global/gamma_aux_5" BEL
+        "control_global/gamma_aux_4" BEL "control_global/gamma_aux_3" BEL
+        "control_global/gamma_aux_2" BEL "control_global/gamma_aux_1" BEL
+        "control_global/gamma_aux_0" BEL "data_loader/state_0" BEL
+        "data_loader/data_out_9" BEL "data_loader/data_out_8" BEL
+        "data_loader/RxRdy_out" BEL "data_loader/data_out_7" BEL
+        "data_loader/data_out_6" BEL "data_loader/data_out_5" BEL
+        "data_loader/data_out_14" BEL "data_loader/data_out_15" BEL
+        "data_loader/data_out_4" BEL "data_loader/data_out_13" BEL
+        "data_loader/data_out_3" BEL "data_loader/data_out_12" BEL
+        "data_loader/data_out_2" BEL "data_loader/data_out_11" BEL
+        "data_loader/data_out_10" BEL "data_loader/data_out_0" BEL
+        "data_loader/data_out_1" BEL "xyz_loader_inst/state_FSM_FFd2" BEL
+        "xyz_loader_inst/y_15" BEL "xyz_loader_inst/y_14" BEL
+        "xyz_loader_inst/y_13" BEL "xyz_loader_inst/y_12" BEL
+        "xyz_loader_inst/y_11" BEL "xyz_loader_inst/y_10" BEL
+        "xyz_loader_inst/y_9" BEL "xyz_loader_inst/y_8" BEL
+        "xyz_loader_inst/y_7" BEL "xyz_loader_inst/y_6" BEL
+        "xyz_loader_inst/y_5" BEL "xyz_loader_inst/y_4" BEL
+        "xyz_loader_inst/y_3" BEL "xyz_loader_inst/y_2" BEL
+        "xyz_loader_inst/y_1" BEL "xyz_loader_inst/y_0" BEL
+        "xyz_loader_inst/x_15" BEL "xyz_loader_inst/x_14" BEL
+        "xyz_loader_inst/x_13" BEL "xyz_loader_inst/x_12" BEL
+        "xyz_loader_inst/x_11" BEL "xyz_loader_inst/x_10" BEL
+        "xyz_loader_inst/x_9" BEL "xyz_loader_inst/x_8" BEL
+        "xyz_loader_inst/x_7" BEL "xyz_loader_inst/x_6" BEL
+        "xyz_loader_inst/x_5" BEL "xyz_loader_inst/x_4" BEL
+        "xyz_loader_inst/x_3" BEL "xyz_loader_inst/x_2" BEL
+        "xyz_loader_inst/x_1" BEL "xyz_loader_inst/x_0" BEL
+        "xyz_loader_inst/z_15" BEL "xyz_loader_inst/z_14" BEL
+        "xyz_loader_inst/z_13" BEL "xyz_loader_inst/z_12" BEL
+        "xyz_loader_inst/z_11" BEL "xyz_loader_inst/z_10" BEL
+        "xyz_loader_inst/z_9" BEL "xyz_loader_inst/z_8" BEL
+        "xyz_loader_inst/z_7" BEL "xyz_loader_inst/z_6" BEL
+        "xyz_loader_inst/z_5" BEL "xyz_loader_inst/z_4" BEL
+        "xyz_loader_inst/z_3" BEL "xyz_loader_inst/z_2" BEL
+        "xyz_loader_inst/z_1" BEL "xyz_loader_inst/z_0" BEL
+        "xyz_loader_inst/RxRdy_out" BEL "xyz_loader_inst/go_ram" BEL
+        "vga/vc_9" BEL "vga/vc_8" BEL "vga/vc_7" BEL "vga/vc_6" BEL "vga/vc_5"
+        BEL "vga/vc_4" BEL "vga/vc_3" BEL "vga/vc_2" BEL "vga/vc_1" BEL
+        "vga/vc_0" BEL "vga/hc_9" BEL "vga/hc_8" BEL "vga/hc_7" BEL "vga/hc_6"
+        BEL "vga/hc_5" BEL "vga/hc_4" BEL "vga/hc_3" BEL "vga/hc_2" BEL
+        "vga/hc_1" BEL "vga/hc_0" BEL "vga/vsenable" BEL
+        "UART_receiver/reception_unit/RxFsm_FSM_FFd2" BEL
+        "UART_receiver/reception_unit/RxFsm_FSM_FFd3" BEL
+        "UART_receiver/reception_unit/Dout_7" BEL
+        "UART_receiver/reception_unit/Dout_6" BEL
+        "UART_receiver/reception_unit/Dout_5" BEL
+        "UART_receiver/reception_unit/Dout_4" BEL
+        "UART_receiver/reception_unit/Dout_3" BEL
+        "UART_receiver/reception_unit/Dout_2" BEL
+        "UART_receiver/reception_unit/Dout_1" BEL
+        "UART_receiver/reception_unit/Dout_0" BEL
+        "UART_receiver/reception_unit/RxBitCnt_31" BEL
+        "UART_receiver/reception_unit/RxBitCnt_30" BEL
+        "UART_receiver/reception_unit/RxBitCnt_29" BEL
+        "UART_receiver/reception_unit/RxBitCnt_28" BEL
+        "UART_receiver/reception_unit/RxBitCnt_27" BEL
+        "UART_receiver/reception_unit/RxBitCnt_26" BEL
+        "UART_receiver/reception_unit/RxBitCnt_25" BEL
+        "UART_receiver/reception_unit/RxBitCnt_24" BEL
+        "UART_receiver/reception_unit/RxBitCnt_23" BEL
+        "UART_receiver/reception_unit/RxBitCnt_22" BEL
+        "UART_receiver/reception_unit/RxBitCnt_21" BEL
+        "UART_receiver/reception_unit/RxBitCnt_20" BEL
+        "UART_receiver/reception_unit/RxBitCnt_19" BEL
+        "UART_receiver/reception_unit/RxBitCnt_18" BEL
+        "UART_receiver/reception_unit/RxBitCnt_17" BEL
+        "UART_receiver/reception_unit/RxBitCnt_16" BEL
+        "UART_receiver/reception_unit/RxBitCnt_15" BEL
+        "UART_receiver/reception_unit/RxBitCnt_14" BEL
+        "UART_receiver/reception_unit/RxBitCnt_13" BEL
+        "UART_receiver/reception_unit/RxBitCnt_12" BEL
+        "UART_receiver/reception_unit/RxBitCnt_11" BEL
+        "UART_receiver/reception_unit/RxBitCnt_10" BEL
+        "UART_receiver/reception_unit/RxBitCnt_9" BEL
+        "UART_receiver/reception_unit/RxBitCnt_8" BEL
+        "UART_receiver/reception_unit/RxBitCnt_7" BEL
+        "UART_receiver/reception_unit/RxBitCnt_6" BEL
+        "UART_receiver/reception_unit/RxBitCnt_5" BEL
+        "UART_receiver/reception_unit/RxBitCnt_4" BEL
+        "UART_receiver/reception_unit/RxBitCnt_3" BEL
+        "UART_receiver/reception_unit/RxBitCnt_2" BEL
+        "UART_receiver/reception_unit/RxBitCnt_1" BEL
+        "UART_receiver/reception_unit/RxBitCnt_0" BEL
+        "UART_receiver/reception_unit/Rx_Reg_7" BEL
+        "UART_receiver/reception_unit/Rx_Reg_6" BEL
+        "UART_receiver/reception_unit/Rx_Reg_5" BEL
+        "UART_receiver/reception_unit/Rx_Reg_4" BEL
+        "UART_receiver/reception_unit/Rx_Reg_3" BEL
+        "UART_receiver/reception_unit/Rx_Reg_2" BEL
+        "UART_receiver/reception_unit/Rx_Reg_1" BEL
+        "UART_receiver/reception_unit/Rx_Reg_0" BEL
+        "UART_receiver/reception_unit/ClrDiv" BEL
+        "UART_receiver/reception_unit/Sig_RxRdy" BEL
+        "UART_receiver/timings_unit/Div16_11" BEL
+        "UART_receiver/timings_unit/Div16_10" BEL
+        "UART_receiver/timings_unit/Div16_9" BEL
+        "UART_receiver/timings_unit/Div16_8" BEL
+        "UART_receiver/timings_unit/Div16_7" BEL
+        "UART_receiver/timings_unit/Div16_6" BEL
+        "UART_receiver/timings_unit/Div16_5" BEL
+        "UART_receiver/timings_unit/Div16_4" BEL
+        "UART_receiver/timings_unit/Div16_3" BEL
+        "UART_receiver/timings_unit/Div16_2" BEL
+        "UART_receiver/timings_unit/Div16_1" BEL
+        "UART_receiver/timings_unit/Div16_0" BEL
+        "UART_receiver/timings_unit/RxDiv_31" BEL
+        "UART_receiver/timings_unit/RxDiv_30" BEL
+        "UART_receiver/timings_unit/RxDiv_29" BEL
+        "UART_receiver/timings_unit/RxDiv_28" BEL
+        "UART_receiver/timings_unit/RxDiv_27" BEL
+        "UART_receiver/timings_unit/RxDiv_26" BEL
+        "UART_receiver/timings_unit/RxDiv_25" BEL
+        "UART_receiver/timings_unit/RxDiv_24" BEL
+        "UART_receiver/timings_unit/RxDiv_23" BEL
+        "UART_receiver/timings_unit/RxDiv_22" BEL
+        "UART_receiver/timings_unit/RxDiv_21" BEL
+        "UART_receiver/timings_unit/RxDiv_20" BEL
+        "UART_receiver/timings_unit/RxDiv_19" BEL
+        "UART_receiver/timings_unit/RxDiv_18" BEL
+        "UART_receiver/timings_unit/RxDiv_17" BEL
+        "UART_receiver/timings_unit/RxDiv_16" BEL
+        "UART_receiver/timings_unit/RxDiv_15" BEL
+        "UART_receiver/timings_unit/RxDiv_14" BEL
+        "UART_receiver/timings_unit/RxDiv_13" BEL
+        "UART_receiver/timings_unit/RxDiv_12" BEL
+        "UART_receiver/timings_unit/RxDiv_11" BEL
+        "UART_receiver/timings_unit/RxDiv_10" BEL
+        "UART_receiver/timings_unit/RxDiv_9" BEL
+        "UART_receiver/timings_unit/RxDiv_8" BEL
+        "UART_receiver/timings_unit/RxDiv_7" BEL
+        "UART_receiver/timings_unit/RxDiv_6" BEL
+        "UART_receiver/timings_unit/RxDiv_5" BEL
+        "UART_receiver/timings_unit/RxDiv_4" BEL
+        "UART_receiver/timings_unit/RxDiv_3" BEL
+        "UART_receiver/timings_unit/RxDiv_2" BEL
+        "UART_receiver/timings_unit/RxDiv_1" BEL
+        "UART_receiver/timings_unit/RxDiv_0" BEL
+        "UART_receiver/timings_unit/Top16" BEL
+        "UART_receiver/timings_unit/TopRx" BEL "rotator/X_rot/state_3" BEL
+        "rotator/X_rot/state_2" BEL "rotator/X_rot/state_1" BEL
+        "rotator/X_rot/i_4" BEL "rotator/X_rot/i_3" BEL "rotator/X_rot/i_1"
+        BEL "rotator/X_rot/i_0" BEL "rotator/X_rot/i_2" BEL
+        "rotator/X_rot/delay_RxRdy/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[0].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[1].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[2].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[3].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[4].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[5].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[6].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[7].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[8].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[9].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[10].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[11].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[12].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[13].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[14].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[15].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[16].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_y/cicle[17].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[0].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[1].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[2].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[3].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[4].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[5].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[6].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[7].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[8].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[9].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[10].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[11].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[12].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[13].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[14].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[15].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[16].ffd_inst/Q" BEL
+        "rotator/X_rot/pipe_reg_x/cicle[17].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[0].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[1].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[2].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[3].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[4].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[5].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[6].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[7].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[8].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[9].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[10].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[11].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[12].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[13].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[14].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[15].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[16].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_y/cicle[17].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[0].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[1].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[2].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[3].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[4].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[5].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[6].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[7].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[8].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[9].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[10].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[11].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[12].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[13].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[14].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[15].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[16].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_x/cicle[17].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[0].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[1].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[2].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[3].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[4].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[5].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[6].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[7].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[8].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[9].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[10].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[11].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[12].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[13].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[14].ffd_inst/Q" BEL
+        "rotator/X_rot/reg_z/cicle[15].ffd_inst/Q" BEL "rotator/Y_rot/state_3"
+        BEL "rotator/Y_rot/state_2" BEL "rotator/Y_rot/state_1" BEL
+        "rotator/Y_rot/i_4" BEL "rotator/Y_rot/i_3" BEL "rotator/Y_rot/i_1"
+        BEL "rotator/Y_rot/i_0" BEL "rotator/Y_rot/i_2" BEL
+        "rotator/Y_rot/delay_RxRdy/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[0].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[1].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[2].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[3].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[4].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[5].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[6].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[7].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[8].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[9].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[10].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[11].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[12].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[13].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[14].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[15].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[16].ffd_inst/Q" BEL
+        "rotator/Y_rot/pipe_reg_y/cicle[17].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[0].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[1].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[2].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[3].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[4].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[5].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[6].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[7].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[8].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[9].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[10].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[11].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[12].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[13].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[14].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[15].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[16].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_y/cicle[17].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[0].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[1].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[2].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[3].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[4].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[5].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[6].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[7].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[8].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[9].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[10].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[11].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[12].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[13].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[14].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[15].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[16].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_x/cicle[17].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[0].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[1].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[2].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[3].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[4].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[5].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[6].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[7].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[8].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[9].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[10].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[11].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[12].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[13].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[14].ffd_inst/Q" BEL
+        "rotator/Y_rot/reg_z/cicle[15].ffd_inst/Q" BEL "rotator/Z_rot/state_3"
+        BEL "rotator/Z_rot/state_2" BEL "rotator/Z_rot/state_1" BEL
+        "rotator/Z_rot/i_4" BEL "rotator/Z_rot/i_3" BEL "rotator/Z_rot/i_1"
+        BEL "rotator/Z_rot/i_0" BEL "rotator/Z_rot/i_2" BEL
+        "rotator/Z_rot/delay_RxRdy/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[0].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[1].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[2].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[3].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[4].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[5].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[6].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[7].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[8].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[9].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[10].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[11].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[12].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[13].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[14].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[15].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[16].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_y/cicle[17].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[0].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[1].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[2].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[3].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[4].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[5].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[6].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[7].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[8].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[9].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[10].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[11].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[12].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[13].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[14].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[15].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[16].ffd_inst/Q" BEL
+        "rotator/Z_rot/pipe_reg_x/cicle[17].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[0].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[1].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[2].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[3].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[4].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[5].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[6].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[7].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[8].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[9].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[10].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[11].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[12].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[13].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[14].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[15].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[16].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_y/cicle[17].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[0].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[1].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[2].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[3].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[4].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[5].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[6].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[7].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[8].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[9].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[10].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[11].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[12].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[13].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[14].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[15].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[16].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_x/cicle[17].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[0].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[1].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[2].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[3].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[4].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[5].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[6].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[7].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[8].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[9].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[10].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[11].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[12].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[13].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[14].ffd_inst/Q" BEL
+        "rotator/Z_rot/reg_z/cicle[15].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[48].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[46].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[45].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[44].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[43].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[42].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[41].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[37].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[36].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[35].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[34].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[33].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[32].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[30].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[29].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[28].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[27].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[26].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[25].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[21].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[20].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[19].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[18].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[17].ffd_inst/Q" BEL
+        "rotator/pipe_reg_out/cicle[16].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[96].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[79].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[78].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[77].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[76].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[75].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[74].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[73].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[72].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[71].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[70].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[69].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[68].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[67].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[66].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[65].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[64].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[63].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[62].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[61].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[60].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[59].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[58].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[57].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[56].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[55].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[54].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[53].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[52].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[51].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[50].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[49].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[48].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[47].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[46].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[45].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[44].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[43].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[42].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[41].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[40].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[39].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[38].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[37].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[36].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[35].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[34].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[33].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[32].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[31].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[30].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[29].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[28].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[27].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[26].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[25].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[24].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[23].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[22].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[21].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[20].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[19].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[18].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[17].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[16].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[15].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[14].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[13].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[12].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[11].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[10].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[9].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[8].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[7].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[6].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[5].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[4].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[3].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[2].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[1].ffd_inst/Q" BEL
+        "rotator/pipe_reg_in/cicle[0].ffd_inst/Q" BEL "ext_RAM/state_FSM_FFd1"
+        BEL "ext_RAM/counter_1" BEL "ext_RAM/counter_0" BEL
+        "ext_RAM/read_ready_out" BEL "control_global/refresh_substate_0" BEL
+        "control_global/clear_reset" BEL "vga/clkdiv_flag" BEL
+        "xyz_loader_inst/state_FSM_FFd1" BEL
+        "UART_receiver/reception_unit/RxFsm_FSM_FFd1" BEL
+        "rotator/X_rot/i_3_1" BEL "rotator/Y_rot/i_3_1" BEL
+        "rotator/X_rot/i_4_1" BEL "rotator/Y_rot/i_4_1" BEL
+        "rotator/X_rot/i_4_2" BEL "rotator/X_rot/i_0_1" BEL
+        "rotator/Y_rot/i_0_1" BEL "rotator/X_rot/i_2_1" BEL
+        "rotator/Y_rot/i_2_1" BEL "rotator/X_rot/i_1_1" PIN
+        "video_RAM_inst/mem/Mram_RAM.A_pins<15>" PIN
+        "video_RAM_inst/mem/Mram_RAM.B_pins<15>" BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[0].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[0].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[1].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[1].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[2].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[2].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[3].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[3].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[4].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[4].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[5].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[5].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[6].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[6].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[7].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[7].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[8].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[8].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[9].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[9].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[10].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[10].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[11].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[11].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[12].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[12].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[13].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[13].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[14].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[14].ffd_inst/Q1"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[15].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[15].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[0].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[0].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[1].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[1].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[2].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[2].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[3].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[3].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[4].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[4].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[5].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[5].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[6].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[6].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[7].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[7].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[8].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[8].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[9].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[9].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[10].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[10].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[11].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[11].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[12].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[12].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[13].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[13].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[14].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[14].ffd_inst/Q1"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[15].ffd_inst/Mshreg_Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[15].ffd_inst/Q1"
+        BEL "leds_out_6_OBUF_shift1" BEL "leds_out_6_OBUF_shift2" BEL
+        "leds_out_6_OBUF_shift3" BEL "leds_out_6_OBUF_shift4" BEL
+        "leds_out_6_OBUF_shift5" BEL "leds_out_6_OBUF_shift6" BEL
+        "leds_out_6_OBUF_shift7" BEL "leds_out_6_OBUF_shift8" BEL
+        "leds_out_6_OBUF_shift9" BEL "leds_out_6_OBUF_shift10" BEL
+        "leds_out_6_OBUF_shift11" BEL "leds_out_6_OBUF_shift12" BEL
+        "leds_out_6_OBUF_shift13" BEL "leds_out_6_OBUF_shift14" BEL
+        "leds_out_6_OBUF_shift15" BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[0].ffd_inst/Q" BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[10].ffd_inst/Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[11].ffd_inst/Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[12].ffd_inst/Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[13].ffd_inst/Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[14].ffd_inst/Q"
+        BEL
+        "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[15].ffd_inst/Q"
+        BEL "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[1].ffd_inst/Q"
+        BEL "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[2].ffd_inst/Q"
+        BEL "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[3].ffd_inst/Q"
+        BEL "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[4].ffd_inst/Q"
+        BEL "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[5].ffd_inst/Q"
+        BEL "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[6].ffd_inst/Q"
+        BEL "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[7].ffd_inst/Q"
+        BEL "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[8].ffd_inst/Q"
+        BEL "rotator/Y_del/gen_retardo[15].con_retardo.aa/cicle[9].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[0].ffd_inst/Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[10].ffd_inst/Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[11].ffd_inst/Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[12].ffd_inst/Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[13].ffd_inst/Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[14].ffd_inst/Q"
+        BEL
+        "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[15].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[1].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[2].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[3].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[4].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[5].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[6].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[7].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[8].ffd_inst/Q"
+        BEL "rotator/X_del/gen_retardo[15].con_retardo.aa/cicle[9].ffd_inst/Q"
+        BEL "xtal_i_BUFGP/BUFG.GCLKMUX" BEL "xtal_i_BUFGP/BUFG";
+TS_xtal_i = PERIOD TIMEGRP "xtal_i" 20 ns HIGH 50%;
+SCHEMATIC END;
+
