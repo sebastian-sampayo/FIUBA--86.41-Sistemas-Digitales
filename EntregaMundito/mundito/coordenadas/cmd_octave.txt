@@ -1,0 +1,15 @@
+Para escribir en binario:
+
+fid = fopen(nombre, "w");
+fwrite(fid, data, "int16", "ieee-le");
+fclose(fid);
+
+Big-Endian (ieee-be) : MSB-LSB
+Little-Endian (ieee-le) : LSB-MSB
+
+Estoy usando Little-Endian
+
+el dato  es una matriz cuya primera fila corresponde a los x, la segunda a y y la tercera a z:
+data = [ --- x ----;
+         --- y ----;
+         --- z ----]
