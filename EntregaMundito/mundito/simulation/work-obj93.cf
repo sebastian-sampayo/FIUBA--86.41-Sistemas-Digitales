@@ -1,0 +1,24 @@
+v 3
+file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/" "src/global_ctrl.vhd" "20160301155031.000" "20160301125035.015":
+  entity global_ctrl at 18( 632) + 0 on 76;
+  architecture global_ctrl_arch of global_ctrl at 54( 1717) + 0 on 77;
+file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/" "tests/test_aplic.vhd" "20160302150300.000" "20160302120309.437":
+  entity testbench at 4( 148) + 0 on 112;
+  architecture rtl of testbench at 15( 349) + 0 on 113;
+file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/" "src/aplic.vhd" "20160302233448.000" "20160302211002.321":
+  entity board_top at 4( 148) + 0 on 144;
+  architecture rtl of board_top at 94( 3448) + 0 on 145;
+file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/" "src/cordic_pkg.vhd" "20160301154045.000" "20160301125033.317":
+  package cordic_pkg at 13( 502) + 0 on 73;
+file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/" "src/extRam_loader.vhd" "20160225045004.000" "20160229123610.859":
+  entity extram_loader at 15( 625) + 0 on 16;
+  architecture extram_loader_arch of extram_loader at 31( 1093) + 0 on 17;
+file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/" "src/xyz_loader.vhd" "20160301234330.000" "20160301211940.752":
+  entity xyz_loader at 23( 893) + 0 on 96;
+  architecture xyz_loader_arch of xyz_loader at 45( 1540) + 0 on 97;
+file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/" "src/cordic.vhd" "20160303000936.000" "20160302211003.782":
+  entity cordic at 30( 1180) + 0 on 146;
+  architecture cordic_arch of cordic at 60( 2009) + 0 on 147;
+file "/home/sebastian/Bitbucket/sistemas-digitales/2015/mundito/" "src/xyz_rotator.vhd" "20160303004201.000" "20160302214203.267":
+  entity xyz_rotator at 17( 556) + 0 on 148;
+  architecture xyz_rotator_arch of xyz_rotator at 49( 1524) + 0 on 149;
